@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import gallery from "@/components/GallerySection.vue";
+import Gallery from "@/components/GallerySection.vue";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import gallery from "@/components/GallerySection.vue";
       by the endpoint's taste.
     </p>
   </header>
-  <main><gallery /></main>
+  <main><Gallery /></main>
 </template>
 
 <style lang="scss" scoped>
