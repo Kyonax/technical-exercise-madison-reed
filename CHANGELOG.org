@@ -8,11 +8,30 @@ This file documents the commits and version control actions for this specific te
 
 * TABLE OF CONTENTs :toc:
 - [[#project-changes][PROJECT CHANGEs]]
+  - [[#2025-09-29-2046-gmt-5-configuration--project-set-up][2025-09-29 20:46 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1945-gmt-5-configuration--project-set-up][2025-09-29 19:45 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1917-gmt-5-configuration--project-set-up][2025-09-29 19:17 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1903-gmt-5-configuration--project-set-up][2025-09-29 19:03 (GMT-5), Configuration & Project Set-up]]
 
 * PROJECT CHANGEs
+** 2025-09-29 20:46 (GMT-5), Configuration & Project Set-up
+- *SASS Architecture:*
+  - Creating the =abstracts= sass files. Base Configuration of the Project.
+    - [[file:src/styles/abstracts/_index.scss][_index.scss]]
+    - [[file:src/styles/abstracts/_mixins.scss][_mixins.scss]]
+    - [[file:src/styles/abstracts/_variables.scss][_variables.scss]]
+  - Implementing Mixins logic for Responsive Implementation and Theaming.
+    - *Mixins:*
+      - [[file:src/styles/abstracts/_mixins.scss::20][@mixin font-face]] - Creates custom @font-face rules.
+      - [[file:src/styles/abstracts/_mixins.scss::38][@mixin min-media-query]] - Sets up a min screen media query.
+      - [[file:src/styles/abstracts/_mixins.scss::55][@mixin max-media-query]] - Sets up a max screen media query.
+    - *Variables:*
+      - [[file:src/styles/abstracts/_variables.scss::10][$breakpoints]] - Stores responsive design breakpoints (`sm`, `md`, `lg`, `xl`).
+      - [[file:src/styles/abstracts/_variables.scss::24][$colors]] - Defines the color palette with scales for `primary`, `secondary`, `base`, `border`, `success`, `warning`, and `error`.
+      - [[file:src/styles/abstracts/_variables.scss::143][$typo-scale]] - Provides responsive typography scale (`small`, `medium`, `large`).
+  - Base Styling.
+    - [[file:src/styles/main.scss][main.scss]] All the Base SCSS Styling for the Project.
+
 ** 2025-09-29 19:45 (GMT-5), Configuration & Project Set-up
 - *Workflows & App:*
   - New App Base =app/technical-exercise-madison-reed/=
