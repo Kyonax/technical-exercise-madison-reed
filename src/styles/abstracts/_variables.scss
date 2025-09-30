@@ -1,0 +1,126 @@
+/**
+ * Breakpoints for Responsive Design (14px root = 1em)
+ * check the main.scss to see the font-size root.
+ *
+ * sm: 40em  = 560px   (mobile → tablet)
+ * md: 64em  = 896px   (tablet → small desktop)
+ * lg: 90em  = 1260px  (desktop → large desktop)
+ * xl: 100em = 1400px  (large desktop → wide screens)
+ */
+$breakpoints: (
+  sm: 40em,
+  md: 64em,
+  lg: 90em,
+  xl: 100em,
+);
+
+/**
+ * Color Palette & Shadows choosed.
+ *
+ * primary: #f9cd26
+ * secondary: #265ef9
+ * base: #F2F2F2
+ * success: #6cb42a
+ * warning: #f98b26
+ * error: #d1263d
+ */
+$colors: (
+  primary: (
+    50: hsl(48, 95%, 78%),
+    100: hsl(47, 95%, 56%),
+    200: hsl(49, 100%, 39%),
+    300: hsl(48, 100%, 29%),
+    400: hsl(45, 100%, 20%),
+    500: hsl(35, 100%, 13%),
+  ),
+  secondary: (
+    50: hsl(224, 95%, 78%),
+    100: hsl(224, 95%, 56%),
+    200: hsl(224, 74%, 45%),
+    300: hsl(224, 74%, 39%),
+    400: hsl(224, 74%, 34%),
+    500: hsl(224, 74%, 22%),
+  ),
+  base: (
+    50: hsl(0, 0%, 95%),
+    100: hsl(0, 0%, 85%),
+    200: hsl(0, 0%, 65%),
+    300: hsl(0, 0%, 45%),
+    400: hsl(0, 0%, 25%),
+    500: hsl(0, 0%, 0%),
+  ),
+  border: (
+    50: hsla(0, 0%, 95.29%, 0.2),
+    100: hsla(0, 0%, 100%, 0.2),
+    200: hsla(0, 0%, 90.59%, 0.2),
+    300: hsla(0, 0%, 85.88%, 0.2),
+    400: hsla(0, 0%, 61.18%, 0.2),
+    500: hsla(0, 0%, 46.47%, 0.2),
+    600: hsla(0, 0%, 26.47%, 0.2),
+  ),
+  success: (
+    50: hsl(91, 48%, 72%),
+    100: hsl(91, 62%, 44%),
+    200: hsl(91, 100%, 28%),
+    300: hsl(105, 100%, 21%),
+    400: hsl(120, 100%, 15%),
+    500: hsl(120, 100%, 9%),
+  ),
+  warning: (
+    50: hsl(29, 95%, 78%),
+    100: hsl(29, 95%, 56%),
+    200: hsl(30, 100%, 40%),
+    300: hsl(25, 100%, 32%),
+    400: hsl(17, 100%, 24%),
+    500: hsl(0, 100%, 17%),
+  ),
+  error: (
+    50: hsl(352, 65%, 74%),
+    100: hsl(352, 69%, 48%),
+    200: hsl(352, 70%, 39%),
+    300: hsl(352, 70%, 34%),
+    400: hsl(352, 70%, 29%),
+    500: hsl(352, 69%, 19%),
+  ),
+);
+
+/**
+ * Typography Scale (14px root = 1em)
+ *
+ * Three levels for responsive scaling:
+ * - small: mobile
+ * - medium: tablet / base
+ * - large: desktop+
+ */
+$typo-scale: (
+  small: (
+    100: 0.625rem,
+    200: 0.75rem,
+    300: 0.875rem,
+    400: 1rem,
+    500: 1.125rem,
+    600: 1.25rem,
+    700: 1.5rem,
+    800: 2rem,
+  ),
+  medium: (
+    100: 0.75rem,
+    200: 0.875rem,
+    300: 1rem,
+    400: 1.25rem,
+    500: 1.5rem,
+    600: 2rem,
+    700: 2.5rem,
+    800: 3.5rem,
+  ),
+  large: (
+    100: 0.875rem,
+    200: 1rem,
+    300: 1.25rem,
+    400: 1.5rem,
+    500: 2rem,
+    600: 3rem,
+    700: 4rem,
+    800: 5rem,
+  ),
+);

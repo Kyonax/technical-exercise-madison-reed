@@ -1,3 +1,52 @@
-body {
-  background-color: black;
+@use "./abstracts" as *;
+
+/**
+ * Root Element
+ *
+ * Generates CSS variables from the SASS maps:
+ * - Colors: --clr-[color]-[shade]
+ * - Typography: --fs-[size], responsive with breakpoints
+ */
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $screen-size, $font-size in $typo-scale {
+    @if $screen-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen-size == medium {
+      @include min-media-query(md) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    } @else if $screen-size == large {
+      @include min-media-query(lg) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+html {
+  font-size: 14px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #fff transparent;
 }
