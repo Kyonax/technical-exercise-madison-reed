@@ -1,0 +1,105 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "sass:color";
+@use "sass:string";
+@use "variables" as *;
+
+/**
+ * Font Face Mixin
+ *
+ * Creates a custom @font-face rule to use your own fonts.
+ * It's quick and to the point.
+ *
+ * @params
+ * $name - The font name.
+ * $path - Where the font file lives.
+ * $weight - Font weight (default: normal).
+ * $style - Font style (default: normal).
+ */
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: "#{$name}";
+    src: url("@/assets/fonts/#{$path}.ttf") format("truetype");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+/**
+ * Min Media Query Mixin
+ *
+ * Sets up a media query for when the screen is at least a
+ * certain size. Perfect for scaling up.
+ *
+ * @params
+ * $key - The size key from your $breakpoints map.
+ */
+@mixin min-media-query($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+/**
+ * Max Media Query Mixin
+ *
+ * Sets up a media query for when the screen is at most a
+ * certain size. Handy for scaling down.
+ *
+ * @params
+ * $key - The size key from your $breakpoints map.
+ */
+@mixin max-media-query($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+/**
+ * Pulse Animation Mixin
+ *
+ * Applies a pulsing overlay animation to an element, typically used
+ * for skeleton loaders or loading placeholders. The overlay animates
+ * its opacity to create a smooth pulsing effect.
+ *
+ * @params
+ * $duration      - Duration of the pulse animation (default: 1.2s).
+ * $ease          - Timing function for the animation (default: ease-in-out).
+ * $min-opacity   - Minimum opacity of the overlay (default: 0.3).
+ * $max-opacity   - Maximum opacity of the overlay (default: 0.6).
+ */
+@mixin pulse(
+  $duration: 1.2s,
+  $ease: ease-in-out,
+  $min-opacity: 0.3,
+  $max-opacity: 0.6
+) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulse-animation $duration $ease infinite;
+  }
+
+  @keyframes pulse-animation {
+    0%,
+    100% {
+      opacity: $min-opacity;
+    }
+    50% {
+      opacity: $max-opacity;
+    }
+  }
+}

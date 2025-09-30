@@ -1,3 +1,114 @@
+@use "./abstracts" as *;
+
+/**
+ * Root Element
+ *
+ * Generates CSS variables from the SASS maps:
+ * - Colors: --clr-[color]-[shade]
+ * - Typography: --fs-[size], responsive with breakpoints
+ */
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $screen-size, $font-size in $typo-scale {
+    @if $screen-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen-size == medium {
+      @include min-media-query(md) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    } @else if $screen-size == large {
+      @include min-media-query(lg) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+// Define SpaceMono fonts
+@include font-face(
+  "SpaceMono",
+  "SpaceMono/SpaceMonoNerdFont-Regular",
+  400,
+  normal
+);
+@include font-face(
+  "SpaceMono",
+  "SpaceMono/SpaceMonoNerdFont-Bold",
+  700,
+  normal
+);
+@include font-face(
+  "SpaceMono",
+  "SpaceMono/SpaceMonoNerdFont-Italic",
+  400,
+  italic
+);
+@include font-face(
+  "SpaceMono",
+  "SpaceMono/SpaceMonoNerdFont-BoldItalic",
+  700,
+  italic
+);
+
+// Define Geomanist fonts
+@include font-face("Geomanist", "Geomanist/GeomanistRegular", 400, normal);
+@include font-face("Geomanist", "Geomanist/GeomanistBold", 700, normal);
+@include font-face("Geomanist", "Geomanist/GeomanistItalic", 400, italic);
+
+// Base App Styling
+html {
+  font-size: 14px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
+  background-color: var(--clr-base-50);
+  color: var(--clr-base-400);
+  font-family:
+    "SpaceMono",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-display: swap;
+  font-size: var(--fs-300);
+  line-height: var(--fs-500);
+  letter-spacing: -0.03rem;
+  scrollbar-width: thin;
+  scrollbar-color: #fff transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Geomanist", "Arial", "Helvetica", sans-serif;
+  font-display: swap;
+}
+
+a {
+  color: var(--clr-secondary-100);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
