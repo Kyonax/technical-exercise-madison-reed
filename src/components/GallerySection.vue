@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import { FETCH_IMGS } from "@/constants/Error.ts";
-import { ENDPOINT_IMGS_LIST } from "@/constants/Data.ts";
+import { FETCH_IMGS } from "@/constants/error.ts";
+import { ENDPOINT_IMGS_LIST } from "@/constants/data.ts";
 
 import axios from "axios";
-import ImageThumbnail from "@/components/ImageThumbnail.vue";
-import ImageModal from "@/components/ImageModal.vue";
+// import ImageThumbnail from "@/components/ImageThumbnail.vue";
+// import ImageModal from "@/components/ImageModal.vue";
 
 type Img = {
   id: string;
@@ -16,7 +16,7 @@ type Img = {
 };
 
 const images = ref<Img[]>([]);
-const selected = ref<Img | null>(null);
+// const selected = ref<Img | null>(null);
 
 onMounted(() => {
   fetch_images();
@@ -27,7 +27,7 @@ const fetch_images = async () => {
     const res = await axios.get<Img[]>(ENDPOINT_IMGS_LIST);
     images.value = res.data;
   } catch (err) {
-    console.error(FETCH_IMGS, err);
+    throw new Error(FETCH_IMGS, err);
   }
 };
 </script>
