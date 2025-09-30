@@ -4,6 +4,8 @@
 #+AUTHOR: Villavicencio/Colombia | +573022539479 | [[mailto:kyonax.corp@gmail.com][kyonax.corp@gmail.com]] | [[https://www.linkedin.com/in/kyonax/][Linkedin]] | [[https://github.com/Kyonax][Github]] | [[https://kyonax.github.io][Personal Web]]
 #+OPTIONS: toc:t num:t date:nil H:5
 
+[[https://youtu.be/5UDKcAo5sac][Video Codebase Walk-through - Youtube]]
+
 This repository contains the implementation of the *Senior Engineer Frontend Code [[file:CHALLENGE.org][Challenge]]* for Madison Reed.
 
 The project was developed using *Vue 3 + TypeScript*, with *SASS* and *PostCSS* integration, following a deliberate set of *custom ESLint rules* to simulate strict coding standards. (This Code Guidelines are just for this case scenario check [[file:eslint.config.ts][eslint.config.ts]])
