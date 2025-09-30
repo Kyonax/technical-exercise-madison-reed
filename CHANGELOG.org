@@ -8,6 +8,7 @@ This file documents the commits and version control actions for this specific te
 
 * TABLE OF CONTENTs :toc:
 - [[#project-changes][PROJECT CHANGEs]]
+  - [[#2025-09-29-2329-gmt-5-app-development--styling][2025-09-29 23:29 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2239-gmt-5-app-development--styling][2025-09-29 22:39 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2046-gmt-5-configuration--project-set-up][2025-09-29 20:46 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1945-gmt-5-configuration--project-set-up][2025-09-29 19:45 (GMT-5), Configuration & Project Set-up]]
@@ -15,6 +16,12 @@ This file documents the commits and version control actions for this specific te
   - [[#2025-09-29-1903-gmt-5-configuration--project-set-up][2025-09-29 19:03 (GMT-5), Configuration & Project Set-up]]
 
 * PROJECT CHANGEs
+** 2025-09-29 23:29 (GMT-5), App Development & Styling
+- *Files Updated:*
+  - [[file:src/components/GallerySection.vue][GallerySection.vue]] Creating the logic to fetch images from the endpoint.
+- *Files Created:*
+  - [[file:src/constants/Data.ts][Data.ts]] Stores constant for image endpoint (`ENDPOINT_IMGS_LIST`).
+  - [[file:src/constants/Error.ts][Error.ts]] Stores reusable error messages for the app.
 ** 2025-09-29 22:39 (GMT-5), App Development & Styling
 - *SASS Updates:*
   - [[file:src/styles/main.scss][main.scss]] New Additions for Global Base Styling

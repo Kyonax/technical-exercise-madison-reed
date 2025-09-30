@@ -68,8 +68,8 @@ Just a TODO List to messure all the backlog in tasks, this is a brain storm list
   - [X] Creation & Implementation of Default Styling (main.scss)
   - [X] Critical Styles for CSS in =index.html=
   - [X] Adding Fonts to Project
-- [ ] App Structure [0/3]
-  - [ ] App Landing Structure Template
+- [-] App Structure [1/4]
+  - [X] App Landing Structure Template
   - [ ] Gallery Component Structure Template
   - [ ] Image Gallery Component Structure Template
   - [ ] Modal Gallery Component Structure Template
