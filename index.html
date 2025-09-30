@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <!--
 .__        __                     .__
 |__| _____/  |_  ______________  _|__| ______  _  __
@@ -9,20 +9,91 @@
         \/          \/                    \/
 
   VUE 3 - index.html
-  - [x] Minimal HTML entry point for the interview exercise
-  - [x] Provides fallback CSS to ensure basic styling
-        in case Sass or compiled assets load late
+  - Minimal HTML entry point
+  - Provides critical CSS fallback
+  - Basic SEO & accessibility ready
 
   Author: Cristian D. Moreno - Kyonax
   Contact: kyonax.corp@gmail.com
   -->
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/technical-exercise-madison-reed/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Technical assessment - Madison Reed Vue 3 project. Minimal fallback styling included."
+    />
+    <meta name="author" content="Cristian D. Moreno" />
+    <link rel="icon" href="/technical-exercise-madison-reed/favicon.ico" />
     <title>Technical Assessment - Madison Reed</title>
-    <script type="module" crossorigin src="/technical-exercise-madison-reed/assets/index-D3RhRwx5.js"></script>
-    <link rel="stylesheet" crossorigin href="/technical-exercise-madison-reed/assets/index-CbZpLbGw.css">
+
+    <!-- Critical CSS Fallback -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 14px;
+      }
+      body {
+        background-color: #f2f2f2;
+        color: #000;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.03rem;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scrollbar-width: thin;
+        scrollbar-color: #fff transparent;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Arial", "Helvetica", sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5em;
+      }
+
+      a {
+        color: #2f5ef9;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Layout & container fallback */
+      #app {
+        padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+    <script type="module" crossorigin src="/technical-exercise-madison-reed/assets/index-JB9n8DMg.js"></script>
+    <link rel="stylesheet" crossorigin href="/technical-exercise-madison-reed/assets/index-B0uUu6Oa.css">
   </head>
   <body>
     <div id="app"></div>
