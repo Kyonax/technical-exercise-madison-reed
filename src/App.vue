@@ -1,12 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import gallery from "@/components/GallerySection.vue";
+</script>
 
 <template>
-  <h1>You did it! Default Configuration</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <header>
+    <h1>The Gallery</h1>
+    <p>
+      The <strong>100 Image</strong> gallery, showcasing the best images from
+      <a href="https://unsplash.com" target="_blank">unsplash.com</a>, selected
+      by the endpoint's taste.
+    </p>
+  </header>
+  <main><gallery /></main>
 </template>
 
 <style lang="scss" scoped>
+header {
+  display: grid;
+  justify-items: center;
+  padding: 0rem 0.5rem;
+
+  h1 {
+    font-size: var(--fs-800);
+    margin-bottom: 1rem;
+  }
+}
 </style>
