@@ -1,0 +1,46 @@
+#+TITLE: Madison Reed — Senior Engineer Code Challenge
+#+AUTHOR: Cristian D. Moreno \\
+#+AUTHOR: Senior Full Stack Web Developer \\
+#+AUTHOR: Villavicencio/Colombia | +573022539479 | [[mailto:kyonax.corp@gmail.com][kyonax.corp@gmail.com]] | [[https://www.linkedin.com/in/kyonax/][Linkedin]] | [[https://github.com/Kyonax][Github]] | [[https://kyonax.github.io][Personal Web]]
+#+OPTIONS: toc:t num:t date:nil H:5
+
+This document outlines a frontend code challenge for the Senior Engineer position at Madison Reed. The challenge focuses on creating an image gallery web application using the Vue JS framework.
+
+* TABLE OF CONTENTs :toc:
+- [[#objective][OBJECTIVE]]
+- [[#time-allocation][TIME ALLOCATION]]
+- [[#technical-requirements][TECHNICAL REQUIREMENTs]]
+- [[#submission][SUBMISSION]]
+- [[#notes][NOTES]]
+
+* OBJECTIVE
+  The task simulates a real-world scenario involving image storage and retrieval within a web application. The goal is to demonstrate your ability to develop a functional user interface for viewing stored images.
+
+* TIME ALLOCATION
+  While a day is allotted, the expectation is to observe your progress and approach within a few hours rather than a fully polished, extended project. Focus on demonstrating your process efficiently.
+
+* TECHNICAL REQUIREMENTs
+
+- The application must fetch and display 100 images from the specified API endpoint: [[[https://picsum.photos/v2/list?limit=100][https://picsum.photos/v2/list?limit=100](https://picsum.photos/v2/list?limit=100][https://picsum.photos/v2/list?limit=100)]]. Using this exact API with the =limit=100= parameter is required (more documentation at [[[https://picsum.photos][picsum.photos](https://picsum.photos][picsum.photos)]]).
+- Images should be presented in a gallery layout, organized as rows of thumbnails.
+- Upon clicking an image, a modal should appear, displaying an enlarged version of the image along with its title and author information.
+- Attention should be given to the application's styling, spacing, and typography.
+- Aim for a harmonious and consistent user interface, but avoid spending excessive time on purely aesthetic refinements.
+
+#+BEGIN_SRC sh
+
+# Example: fetch the list of 100 images
+
+curl "[https://picsum.photos/v2/list?limit=100](https://picsum.photos/v2/list?limit=100)"
+#+END_SRC
+
+* SUBMISSION
+
+- The completed code should be hosted in a GitHub repository. The repository can be public or private.
+- If the repository is private, access must be granted to =@andris310=.
+- The repository should include clear instructions on how to run the application on a local machine.
+
+* NOTES
+
+- Focus on clarity, component organization, and a working user experience over pixel-perfect design.
+- Include any important assumptions or trade-offs in the repository README.
