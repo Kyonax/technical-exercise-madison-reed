@@ -13,10 +13,10 @@ The project was developed using *Vue 3 + TypeScript*, with *SASS* and *PostCSS* 
 - [[#set-up-instructions][SET-UP INSTRUCTIONs]]
 - [[#backlog][BACKLOG]]
   - [[#project-initialization-11-100][PROJECT INITIALIZATION]]
-  - [[#styles--architecture-14-25][STYLES & ARCHITECTURE]]
-  - [[#core-components-02-0][CORE COMPONENTs]]
-  - [[#composables--][COMPOSABLEs]]
-  - [[#final-refining--][FINAL REFINING]]
+  - [[#styles--architecture-44-100][STYLES & ARCHITECTURE]]
+  - [[#core-components-22-100][CORE COMPONENTs]]
+  - [[#composables-11-100][COMPOSABLEs]]
+  - [[#final-refining-03-0][FINAL REFINING]]
 - [[#documentation][DOCUMENTATION]]
 
 * PROJECT CONFIG
@@ -62,35 +62,41 @@ Just a TODO List to messure all the backlog in tasks, this is a brain storm list
   - [X] PostCSS Configuration
   - [X] Vite Configuration
 
-** STYLES & ARCHITECTURE [1/4] [25%]
+** STYLES & ARCHITECTURE [4/4] [100%]
 - [X] Default Styling Set-up [4/4]
   - [X] Creation of Abstracts (variables, mixins)
   - [X] Creation & Implementation of Default Styling (main.scss)
   - [X] Critical Styles for CSS in =index.html=
   - [X] Adding Fonts to Project
-- [-] App Structure [1/4]
+- [X] App Structure [4/4]
   - [X] App Landing Structure Template
-  - [ ] Gallery Component Structure Template
-  - [ ] Image Gallery Component Structure Template
-  - [ ] Modal Gallery Component Structure Template
-- [ ] App Styling [0/2]
-  - [ ] Style of =App.vue= (intro section, gallery section)
-  - [ ] Responsive for Style
-- [ ] Components Styling [0/2]
-  - [ ] Image Gallery Component Style
-    - [ ] Base Style
-    - [ ] Skeleton Image Fallback Style
-    - [ ] Responsive
-  - [ ] Modal Gallery Component Style
-    - [ ] Base Style
-    - [ ] Responsive
+  - [X] Gallery Component Structure Template
+  - [X] Image Gallery Component Structure Template
+  - [X] Modal Gallery Component Structure Template
+- [X] App Styling [2/2]
+  - [X] Style of =App.vue= (intro section, gallery section)
+  - [X] Responsive for Style
+- [X] Components Styling [2/2]
+  - [X] Image Gallery Component Style
+    - [X] Base Style
+    - [X] Skeleton Image Fallback Style
+    - [X] Responsive
+  - [X] Modal Gallery Component Style
+    - [X] Base Style
+    - [X] Skeleton Image Fallback Style
+    - [X] Responsive
 
-** CORE COMPONENTs [0/2] [0%]
-- [ ] Image Gallery Component
-- [ ] Modal Gallery Component
+** CORE COMPONENTs [2/2] [100%]
+- [X] Image Gallery Component
+- [X] Modal Gallery Component
 
-** COMPOSABLEs [/] [%]
-** FINAL REFINING [/] [%]
+** COMPOSABLEs [1/1] [100%]
+- [X] Lazy Load Intersection Observer
+
+** TODO FINAL REFINING [0/3] [0%]
+- [ ] Create a File to handling all the common Typos
+- [ ] Refine the Composables
+- [ ] Try to implement a better LazyLoad solution (maybe an existing package)
 
 * DOCUMENTATION
   - [[file:CHALLENGE.org][CHALLENGE.org]] → Technical exercise definition
