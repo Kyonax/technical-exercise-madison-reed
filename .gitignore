@@ -12,6 +12,12 @@
 #  Contact: kyonax.corp@gmail.com                         #
 ###########################################################
 
+# =====================
+# DOCUMENTATION
+# =====================
+cv-latex-export.org
+<% require 'pry'; binding.pry %>
+MADISON_REED_CRISTIAN_MORENO.tex
 
 # =====================
 # NODE / FRONTEND (Vue & Vite)
