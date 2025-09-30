@@ -13,7 +13,7 @@ The project was developed using *Vue 3 + TypeScript*, with *SASS* and *PostCSS* 
 - [[#set-up-instructions][SET-UP INSTRUCTIONs]]
 - [[#backlog][BACKLOG]]
   - [[#project-initialization-11-100][PROJECT INITIALIZATION]]
-  - [[#styles--architecture-03-0][STYLES & ARCHITECTURE]]
+  - [[#styles--architecture-14-25][STYLES & ARCHITECTURE]]
   - [[#core-components-02-0][CORE COMPONENTs]]
   - [[#composables--][COMPOSABLEs]]
   - [[#final-refining--][FINAL REFINING]]
@@ -62,11 +62,17 @@ Just a TODO List to messure all the backlog in tasks, this is a brain storm list
   - [X] PostCSS Configuration
   - [X] Vite Configuration
 
-** STYLES & ARCHITECTURE [0/3] [0%]
-- [-] Default Styling Set-up [1/3]
+** STYLES & ARCHITECTURE [1/4] [25%]
+- [X] Default Styling Set-up [4/4]
   - [X] Creation of Abstracts (variables, mixins)
-  - [ ] Creation & Implementation of Default Styling (main.scss)
-  - [ ] Critical Styles for CSS in =index.html=.
+  - [X] Creation & Implementation of Default Styling (main.scss)
+  - [X] Critical Styles for CSS in =index.html=
+  - [X] Adding Fonts to Project
+- [ ] App Structure [0/3]
+  - [ ] App Landing Structure Template
+  - [ ] Gallery Component Structure Template
+  - [ ] Image Gallery Component Structure Template
+  - [ ] Modal Gallery Component Structure Template
 - [ ] App Styling [0/2]
   - [ ] Style of =App.vue= (intro section, gallery section)
   - [ ] Responsive for Style
