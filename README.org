@@ -35,6 +35,7 @@ Here you can see the whole base configuration used for this specific exercise:
 The project follows the default steps of (dev/build) for a *Vue 3* project plus the specific linters of the code guidelines in this case.
 
 - Ensure *Node.js 20.x LTS* is installed.
+- LocalHost: [[http://localhost:5173/technical-exercise-madison-reed/][app/technical-exercise-madison-reed/]]
 
 #+BEGIN_SRC sh
 # INSTALL DEPENDENCIES
