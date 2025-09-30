@@ -59,3 +59,47 @@
     @content;
   }
 }
+
+/**
+ * Pulse Animation Mixin
+ *
+ * Applies a pulsing overlay animation to an element, typically used
+ * for skeleton loaders or loading placeholders. The overlay animates
+ * its opacity to create a smooth pulsing effect.
+ *
+ * @params
+ * $duration      - Duration of the pulse animation (default: 1.2s).
+ * $ease          - Timing function for the animation (default: ease-in-out).
+ * $min-opacity   - Minimum opacity of the overlay (default: 0.3).
+ * $max-opacity   - Maximum opacity of the overlay (default: 0.6).
+ */
+@mixin pulse(
+  $duration: 1.2s,
+  $ease: ease-in-out,
+  $min-opacity: 0.3,
+  $max-opacity: 0.6
+) {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: pulse-animation $duration $ease infinite;
+  }
+
+  @keyframes pulse-animation {
+    0%,
+    100% {
+      opacity: $min-opacity;
+    }
+    50% {
+      opacity: $max-opacity;
+    }
+  }
+}

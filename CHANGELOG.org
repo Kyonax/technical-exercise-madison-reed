@@ -8,6 +8,7 @@ This file documents the commits and version control actions for this specific te
 
 * TABLE OF CONTENTs :toc:
 - [[#project-changes][PROJECT CHANGEs]]
+  - [[#2025-09-30-0227-gmt-5-app-development--styling][2025-09-30 02:27 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2329-gmt-5-app-development--styling][2025-09-29 23:29 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2239-gmt-5-app-development--styling][2025-09-29 22:39 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2046-gmt-5-configuration--project-set-up][2025-09-29 20:46 (GMT-5), Configuration & Project Set-up]]
@@ -16,6 +17,15 @@ This file documents the commits and version control actions for this specific te
   - [[#2025-09-29-1903-gmt-5-configuration--project-set-up][2025-09-29 19:03 (GMT-5), Configuration & Project Set-up]]
 
 * PROJECT CHANGEs
+** 2025-09-30 02:27 (GMT-5), App Development & Styling
+- *Files Updated:*
+  - [[file:src/components/GallerySection.vue][GallerySection.vue]] Added modal open/close logic, integrated `ImageThumbnail` and `ImageModal`, added URL limit param and improved error handling with Vue 3 reactivity.
+  - [[file:src/components/ImageModal.vue][ImageModal.vue]] Created modal component for displaying selected image with skeleton loader, show/hide props, close button, and responsive styling.
+  - [[file:src/components/ImageThumbnail.vue][ImageThumbnail.vue]] Created individual thumbnail component with lazy-load, responsive `picture` sources, hover effects, skeleton loader, and click event to open modal.
+  - [[file:src/constants/data.ts][data.ts]] Added `ENDPOINT_IMG_BASE` for resized image URLs and updated `ENDPOINT_IMGS_LIST`.
+  - [[file:src/styles/abstracts/_mixins.scss][_mixins.scss]] Added `pulse` mixin for skeleton loader animations.
+- *Files Created:*
+  - [[file:src/composables/lazy-load.ts][lazy-load.ts]] Vue 3 composable for lazy loading images using Intersection Observer.
 ** 2025-09-29 23:29 (GMT-5), App Development & Styling
 - *Files Updated:*
   - [[file:src/components/GallerySection.vue][GallerySection.vue]] Creating the logic to fetch images from the endpoint.

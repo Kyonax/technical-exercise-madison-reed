@@ -18,6 +18,7 @@ import Gallery from "@/components/GallerySection.vue";
 header {
   display: grid;
   justify-items: center;
+  margin: 3rem 0rem;
   padding: 0rem 0.5rem;
 
   h1 {
