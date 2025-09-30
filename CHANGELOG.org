@@ -8,9 +8,17 @@ This file documents the commits and version control actions for this specific te
 
 * TABLE OF CONTENTs :toc:
 - [[#project-changes][PROJECT CHANGEs]]
+  - [[#2025-09-29-1917-gmt-5-configuration--project-set-up][2025-09-29 19:17 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1903-gmt-5-configuration--project-set-up][2025-09-29 19:03 (GMT-5), Configuration & Project Set-up]]
 
 * PROJECT CHANGEs
+** 2025-09-29 19:17 (GMT-5), Configuration & Project Set-up
+- *Version Management:*
+  - Creation of =develop= branch
+  - Github Actions Set-up
+    - Creation of [[file:.github/deploy-to-build-dev.yml][deploy-to-build-dev.yml]] CI
+    - Creation of [[file:.github/deploy-to-build-main.yml][deploy-to-build-main.yml]] CI
+
 ** 2025-09-29 19:03 (GMT-5), Configuration & Project Set-up
 - *Set-Up & Configuration:*
   - [[file:eslint.config.ts][ESlint]] with specific Code Guidelines
