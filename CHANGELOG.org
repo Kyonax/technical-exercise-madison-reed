@@ -8,12 +8,48 @@ This file documents the commits and version control actions for this specific te
 
 * TABLE OF CONTENTs :toc:
 - [[#project-changes][PROJECT CHANGEs]]
+  - [[#2025-09-29-2239-gmt-5-app-development--styling][2025-09-29 22:39 (GMT-5), App Development & Styling]]
   - [[#2025-09-29-2046-gmt-5-configuration--project-set-up][2025-09-29 20:46 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1945-gmt-5-configuration--project-set-up][2025-09-29 19:45 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1917-gmt-5-configuration--project-set-up][2025-09-29 19:17 (GMT-5), Configuration & Project Set-up]]
   - [[#2025-09-29-1903-gmt-5-configuration--project-set-up][2025-09-29 19:03 (GMT-5), Configuration & Project Set-up]]
 
 * PROJECT CHANGEs
+** 2025-09-29 22:39 (GMT-5), App Development & Styling
+- *SASS Updates:*
+  - [[file:src/styles/main.scss][main.scss]] New Additions for Global Base Styling
+    - *Fonts:*
+      - [[file:src/styles/main.scss::32][SpaceMono]] - Defines custom SpaceMono font-face rules (regular, bold, italic, bold italic).
+      - [[file:src/styles/main.scss::41][Geomanist]] - Defines custom Geomanist font-face rules (regular, bold, italic).
+    - *Base Element Styling:*
+      - [[file:src/styles/main.scss::58][body]] - Base body styles: background, font-family, font-size, line-height, letter-spacing, scrollbar.
+      - [[file:src/styles/main.scss::72][h1-h5]] - Sets heading fonts and fallback fonts.
+      - [[file:src/styles/main.scss::78][a]] - Link colors and hover behavior.
+- *Critical CSS Fallback:*
+  - [[file:index.html][index.html]] Inline styles to provide basic styling before Vue 3 bundles load
+    - *Reset & Box Sizing:*
+      - [[file:index.html::21][*]] - Applies universal `box-sizing: border-box` and resets margin/padding.
+    - *Root & Body:*
+      - [[file:index.html::27][html]] - Sets base font-size.
+      - [[file:index.html::30][body]] - Base body styles: background, color, fallback fonts, font-size, line-height, letter-spacing, min-height, font smoothing, scrollbars.
+    - *Headings:*
+      - [[file:index.html::47][h1-h5]] - Fallback fonts and font-weight for headings, basic spacing.
+    - *Links:*
+      - [[file:index.html::54][a]] - Default link color and hover behavior.
+    - *Images:*
+      - [[file:index.html::59][img]] - Responsive images: max-width 100%, auto height, block display.
+    - *Layout / App Container:*
+      - [[file:index.html::64][#app]] - Provides padding, max-width, and centers the main container for layout fallback.
+- *App Vue Structure (file updated):*
+  - [[file:src/App.vue::2][Import GallerySection]] - Imports `GallerySection.vue` component for main gallery display.
+  - [[file:src/App.vue::5][Header]] - Description for the App.
+  - [[file:src/App.vue::11][Gallery Component]] - Integrates `<gallery />` as the main gallery section.
+  - [[file:src/App.vue::15][Header]] - Styles for the App's Description.
+- *Components Creation (files created):*
+  - [[file:src/components/GallerySection.vue][GallerySection.vue]] Parent gallery section component
+  - [[file:src/components/ImageModal.vue][ImageModal.vue]] Modal component for displaying a selected image
+  - [[file:src/components/ImageThumbnail.vue][ImageThumbnail.vue]] Individual image card / thumbnail
+
 ** 2025-09-29 20:46 (GMT-5), Configuration & Project Set-up
 - *SASS Architecture:*
   - Creating the =abstracts= sass files. Base Configuration of the Project.
