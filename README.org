@@ -98,6 +98,36 @@ Just a TODO List to messure all the backlog in tasks, this is a brain storm list
 - [ ] Refine the Composables
 - [ ] Try to implement a better LazyLoad solution (maybe an existing package)
 
+*** TODO MULTIPLE LAZY LOAD [0/6]
+- [ ] Types for Lazy Load
+  - Defined as `type LazyLoadOptions`
+  - Includes: root, rootMargin, threshold, groupKey
+
+- [ ] Types for Observer Entry
+  - Defined as `type ObserverEntry`
+  - Includes: observer, el_map, ref_count
+
+- [ ] Observer Store Variable
+  - `_observer_store = new Map<string, ObserverEntry>()`
+  - Manages global shared observers keyed by options
+
+- [ ] Utility: Make Key Function
+  - `_make_key(opts?: LazyLoadOptions)`
+  - Builds unique string key from rootMargin | threshold | groupKey
+  - Ensures consistent store access
+
+- [ ] Composable Setup
+  - `use_lazy_load_shared(src: string, opts?: LazyLoadOptions)`
+  - Defines `image_src` (reactive) and `image_ref` (DOM ref)
+  - Maintains `store_key` reference for cleanup
+
+- [ ] Lifecycle: onMounted
+  - Guard for SSR (`typeof window`)
+  - Initialize or reuse observer from `_observer_store`
+  - Save target dataset (`dataset.lazy_src`)
+  - Register setter in `el_map`
+  - Observe element with IntersectionObserver
+
 * DOCUMENTATION
   - [[file:CHALLENGE.org][CHALLENGE.org]] → Technical exercise definition
   - [[file:CHANGELOG.org][CHANGELOG.org]] → Commit and version history
